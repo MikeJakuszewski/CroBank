@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
+import styles from "../style";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
+      {/* <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" /> */}
+      <h1 className={`${styles.heading2} w-[124px] h-[32px]`}>
+        Cro<span className="text-secondary">Bank</span>
+      </h1>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((link, i) => (
           <li
